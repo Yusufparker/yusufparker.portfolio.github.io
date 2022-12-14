@@ -229,6 +229,16 @@ body{
     transition: .5s;
 }
 
+
+.inputbox .pesan{
+    background-color: var(--bgcolor);
+    border-color: var(--sColor);
+}
+
+.text-message{
+    color: var(--sColor);
+}
+
 .inputbox input:valid ~span,
 .inputbox input:focus ~span{
     color: var(--sColor);
@@ -239,6 +249,18 @@ body{
     border-right: 1px solid var(--sColor);
     padding: 0 10px;
     letter-spacing: .2em;
+}
+
+.btn-kirim{
+    background-color: var(--sColor);
+    color: var(--bgcolor);
+    
+}
+
+
+.btn-kirim:hover{
+    background-color: #064075;
+    color: white;
 }
 
 
