@@ -160,6 +160,13 @@ body{
     letter-spacing: 1px;
 }
 
+.projek-github{
+    color: white;
+}
+.projek-github:hover{
+    color: var(--sColor);
+}
+
 .certificate{
     cursor: zoom-in;
 
@@ -190,20 +197,28 @@ body{
 
 
 
-.contact-card{
-    background-color: #3bacb665;
-    border-radius: 30px;
+.sosial-media{
+    background-color: var(--bgcolor);
+    transition: all .3s;
+}
+
+.sosial-media i{
+    color: var(--sColor);
+    transition: all .3s;
+}
+
+.sosial-media:hover{
+    background-color: #064075;
+    transition: all .3s;
+    
+}
+.sosial-media:hover i{
+    color: white;
+    transition: all .3s;
+    
 }
 
 
-.contact-card p:nth-child(3){
-    margin-top: -10px;
-}
-
-.contact-card a{
-    text-decoration: none;
-    color: var(--bgcolor);
-}
 
 
 .inputbox{
@@ -274,6 +289,18 @@ body{
 
     .nav2{
         gap: 3px;
+    }
+
+    .sosmed-group{
+        display: flex;
+        flex-direction: row;
+        
+        
+    }
+
+    .sosmed-group .sosial-media{
+        margin: 10px;
+        padding:15px;
     }
 
 }
