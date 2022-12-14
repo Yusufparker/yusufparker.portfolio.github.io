@@ -177,7 +177,9 @@
                     <p class="text-white fw-bold mt-3">My Portfolio Before</p>
                     <a href="https://yusufs-portfolio.muhammadyusuf73.repl.co/" target="blank" class="btn mt-4">Live Demo</a>
                 </div>
-
+            </div>
+            <div class="row d-flex justify-content-center">
+                <a href="https://github.com/Yusufparker/" target="_blank" class="text-center text-decoration-none projek-github"><i class="bi bi-github"></i> My other projects on github</a>
             </div>
             
         </div>
@@ -186,32 +188,27 @@
 
 
         <!-- contact me -->
-        <div class="container mt-5 p-5">
+        <div class="container mt-5 p-5 mb-5">
             <div class="row text-center part-tittle mb-4">
                 <p class="text-white" id="contact">Get in Touch</p>
                 <h3>Contact Me</h3>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-4 ps-5 pe-5 justify-content-center">
-                    <div class="row text-center text-white contact-card p-2 mb-3">
-                        <i class="bi bi-youtube fs-3"></i>
-                        <p class="fw-bold mt-1">Youtube</p>
-                        <p>Yusuf Parker</p>
-                        <a href="https://www.youtube.com/channel/UC06dRTiFtYZY-6x-I0afnMA" target="_blank">Visit</a>
+                <div class="col-md-1 justify-content-center sosmed-group">
+                    <div class="text-center sosial-media rounded mb-3 pt-2 pb-2">
+                        <a href="https://www.instagram.com/yusuf_parker/" target="_blank" class=" fs-1"><i class="bi bi-instagram"></i></a>
                     </div>
-                    <div class="row text-center text-white contact-card p-2 mb-3">
-                        <i class="bi bi-instagram fs-3"></i>
-                        <p class="fw-bold mt-1">Instagram</p>
-                        <p>yusuf_parker</p>
-                        <a href="https://www.instagram.com/yusuf_parker/" target="_blank">Send a message</a>
+                    <div class="text-center sosial-media rounded mb-3 pt-2 pb-2">
+                        <a href="https://www.youtube.com/channel/UC06dRTiFtYZY-6x-I0afnMA" target="_blank" class=" fs-1"><i class="bi bi-youtube"></i></a>
                     </div>
-                    <div class="row text-center text-white contact-card p-2 mb-3">
-                        <i class="bi bi-whatsapp fs-3"></i>
-                        <p class="fw-bold mt-3">WhatsApp</p>
-                        <p>082111563925</p>
-                        <a href="">Send a message</a>
+                    <div class="text-center sosial-media rounded mb-3 pt-2 pb-2">
+                        <a href="https://www.tiktok.com/@yusufparker16" target="_blank" class=" fs-1"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <div class="text-center sosial-media rounded mb-3 pt-2 pb-2">
+                        <a href="mailto:mrmy160602@gmail.com" target="_blank" class=" fs-1"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
+                
                 
                 <form class="col-md-6 justify-content-center" name="submit-to-google-sheet">
                     <div class="alert alert-primary alert-dismissible fade show d-none my-alert" role="alert">
@@ -220,23 +217,23 @@
                     </div>
                     <div class="inputbox mb-3">
                         <input type="text" required name="nama" id="namaPengirim">
-                        <span>Your Name</span>
-                    </div>
+                        <span>Your Name</span>                    </div>
                     <div class="inputbox mb-3">
                         <input type="text" required name="email" id="emailPengirim">
                         <span>Your Email</span>
                     </div>
                     <span class="text-message">Your Message</span>
                     <div class="inputbox">
-                        <textarea type="text" required class="form-control pesan text-white" name="pesan" rows="3" id="pesanPengirim"></textarea>
+                        <textarea type="text" required class="form-control pesan text-white" name="pesan" rows="8" id="pesanPengirim"></textarea>
                     </div>
-
+                    
                     <button type="submit" class="btn btn-kirim mt-3">Kirim</button>
                     <button class="btn btn-primary mt-3 btn-loading d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Loading...
                     </button>
                 </form>
+                
             </div>
         </div>
 
@@ -303,30 +300,6 @@
             
 
         </script>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyxUltLgCaaVtb0dmYKsJ97skawX4FL6f3SjNAFIClpbjfGB8UKgKlcyTDl9415d7h0/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const btnKirim = document.querySelector('.btn-kirim')
-            const btnLoading = document.querySelector('.btn-loading')
-            const myAlert = document.querySelector('.my-alert')
-            form.addEventListener('submit', e => {
-                //ketika tombol submit diklik
-                //tampilkan loading , hilang kirim
-                btnLoading.classList.toggle('d-none');
-                btnKirim.classList.toggle('d-none');
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response =>{ 
-                        //tampilkan kirim , hilang loading
-                        btnLoading.classList.toggle('d-none');
-                        btnKirim.classList.toggle('d-none');
-                        //tampilkan alert
-                        myAlert.classList.toggle('d-none')
-                        form.reset();
-                        console.log('Success!', response)
-                })
-                    .catch(error => console.error('Error!', error.message))
-            })
-        </script>
+        <script src="contact.js"></script>
     </body>
 </html>
